@@ -1,0 +1,171 @@
+@media screen and (max-width: 1439px) {
+  .courses__item {
+    &-content-info {
+      max-width: 480px;
+      margin-right: 40px;
+    }
+  }
+  .footer__wrap {
+    padding: 0 53px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .main__content {
+    padding: 20px 20px 60px;
+  }
+  .main-title {
+    margin-bottom: 20px;
+  }
+  .offer {
+    margin-bottom: 40px;
+  }
+  .courses__item {
+    &-img {
+      margin-right: 20px;
+      width: 70px;
+      height: 70px;
+    }
+
+    &-content-info {
+      max-width: 378px;
+      margin-right: 20px;
+    }
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 41px;
+
+    &__wrap {
+      padding: 0 35px;
+    }
+
+    &__list {
+      div {
+        &:nth-child(n) {
+          margin-right: 40px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__extra {
+      &-license {
+        text-align: center;
+
+        p {
+          display: block;
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+
+      &-social {
+        justify-content: center;
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main__content {
+    padding: 20px 20px 70px;
+  }
+  .offer {
+    align-items: center;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .courses__item-img {
+    margin-bottom: 20px;
+  }
+  .courses__item-content-info {
+    max-width: 100%;
+
+  }
+
+  .footer {
+    padding-bottom: 32px;
+
+    &__wrap {
+      padding: 0 55px;
+    }
+
+    &__extra {
+      padding-top: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .footer__contacts {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  .courses__item-content-info {
+    margin-bottom: 20px;
+  }
+  .courses__item-description-list {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 556px) {
+
+  .exam__content {
+    padding: 20px;
+    padding-bottom: 24px;
+
+    &-title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 20px;
+
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: normal;
+    }
+
+    & .btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .courses__item {
+    padding-bottom: 36px;
+
+    &-content-info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .footer__list {
+    div:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .exam__content-subtitle {
+    padding: 0;
+  }
+}

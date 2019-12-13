@@ -1,0 +1,30 @@
+.breadcrumb {
+  font-size: 14px;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  > li {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0 15px;
+    border-right: 1px solid #e2e2e2;
+
+    a {
+      color: inherit;
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}

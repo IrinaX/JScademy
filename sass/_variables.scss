@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Lato;
+  font-weight: normal;
+  src: url("fonts/latoregular.ttf") format('ttf'),
+  url("fonts/latoregular.woff") format('woff'),
+  url("fonts/latoregular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: 700;
+  src: url("fonts/latobold.ttf") format('ttf'),
+  url("fonts/latobold.woff") format('woff'),
+  url("fonts/latobold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: 300;
+  src: url("fonts/latolight.ttf") format('ttf'),
+  url("fonts/latolight.woff") format('woff'),
+  url("fonts/latolight.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: 400;
+  font-style: italic;
+  src: url("fonts/latoitalic.ttf") format('ttf'),
+  url("fonts/latoitalic.woff") format('woff'),
+  url("fonts/latoitalic.woff2") format('woff2');
+}
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+
+$base-font: 16px/19px Lato, sans-serif;
+
+$h1-font: 300 48px/100% Lato, sans-serif;
+$h1-font-sm: $h1-font;
+$h1-margin-bottom: 40px;
+
+$h2-font: 700 32px/39px Lato, sans-serif;
+$h2-font-sm: $h2-font;
+$h2-margin-bottom: 24px;
+
+$h3-font: 700 32px/39px Lato, sans-serif;
+$h3-font-sm: $h3-font;
+$h3-margin-bottom: 24px;
+
+$h4-font: 700 20px/24px Lato, sans-serif;
+$h4-font-sm: $h4-font;
+$h4-margin-bottom: 16px;
+
+$h5-font: $h4-font;
+$h5-font-sm: $h4-font;
+$h5-margin-bottom: $h4-margin-bottom;
+
+$spacers: (
+        6: ($spacer * 6),
+        7: ($spacer * 7),
+        8: ($spacer * 8),
+        9: ($spacer * 9),
+        10: ($spacer * 10),
+);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1440px
+);
+
+$container-max-widths: (
+        //md: 728px,
+        //lg: 940px,
+        //xl: 1280px
+
+        md: 728px,
+        lg: 940px,
+        xl: 1280px
+);
+
+@mixin respond-to($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+
+    $next-breakpoint: nth(map_keys($grid-breakpoints), index(map_keys($grid-breakpoints), $breakpoint) + 1);
+
+    $next-breakpoint-value: map-get($grid-breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (max-width: $next-breakpoint-value) {
+      @content;
+    }
+
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
